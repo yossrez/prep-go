@@ -6,7 +6,7 @@ import (
 
 	_ "github.com/yossrez/prep-go/internal/hackerrank/certify/basics/modstrings"
 	_ "github.com/yossrez/prep-go/internal/hackerrank/certify/basics/parity"
-	_ "github.com/yossrez/prep-go/internal/hackerrank/fizzbuzz"
+	_ "github.com/yossrez/prep-go/internal/hackerrank/easy/fizzbuzz"
 	"github.com/yossrez/prep-go/internal/hackerrank/runner"
 )
 
