@@ -6,6 +6,8 @@ import (
 	"github.com/yossrez/prep-go/internal/hackerrank/runner"
 )
 
+const SUBDOMAINS = "Warmup"
+
 // for testing purposes
 var testBucket []string
 
