@@ -6,8 +6,6 @@ import (
 	"github.com/yossrez/prep-go/internal/hackerrank/runner"
 )
 
-const SUBDOMAINS = "Warmup"
-
 // for testing purposes
 var testBucket []string
 
@@ -48,5 +46,10 @@ func Run() {
 
 // ran automatically when the package imported
 func init() {
-	runner.Register("fizzbuzz", Run)
+	meta := runner.HackerRankMeta{}
+	meta.Problem = "fizzbuzz"
+	meta.Skills = runner.ProblemSolvingBasic
+	meta.Difficulty = runner.Easy
+	meta.Subdomain = runner.Warmup
+	runner.Register(meta, Run)
 }

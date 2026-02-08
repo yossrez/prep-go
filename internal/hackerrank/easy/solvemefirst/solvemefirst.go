@@ -6,8 +6,6 @@ import (
 	"github.com/yossrez/prep-go/internal/hackerrank/runner"
 )
 
-const SUBDOMAINS = "Warmup"
-
 func solveMeFirst(a uint32, b uint32) uint32 {
 	// Hint: Type return (a+b) below
 	return a + b
@@ -22,5 +20,10 @@ func Run() {
 }
 
 func init() {
-	runner.Register("solvemefirst", Run)
+	meta := runner.HackerRankMeta{}
+	meta.Problem = "solvemefirst"
+	meta.Skills = runner.ProblemSolvingBasic
+	meta.Difficulty = runner.Easy
+	meta.Subdomain = runner.Warmup
+	runner.Register(meta, Run)
 }
