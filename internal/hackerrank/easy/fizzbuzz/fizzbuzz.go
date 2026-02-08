@@ -9,6 +9,13 @@ import (
 // for testing purposes
 var testBucket []string
 
+/*
+ * Given an integers,
+ * print 'Fizz' if the number divisible by 3
+ * print 'Buzz' if the number divisible by 5
+ * print 'FizzBuzz' if the number divisible by 3 and 5
+ * otherwise print the number itself.
+ */
 func fizzBuzz(n int32) {
 	// Write your code here
 	var bucket []string = make([]string, n)
