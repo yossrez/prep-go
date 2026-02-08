@@ -1,0 +1,21 @@
+package main
+
+import (
+	"fmt"
+	"os"
+
+	_ "github.com/yossrez/prep-go/internal/hackerrank/certify/basics/modstrings"
+	_ "github.com/yossrez/prep-go/internal/hackerrank/certify/basics/parity"
+	"github.com/yossrez/prep-go/internal/hackerrank/runner"
+)
+
+func main() {
+	if len(os.Args) < 2 {
+		fmt.Println(runner.List())
+		return
+	}
+	err := runner.Execute(os.Args[1])
+	if err != nil {
+		panic(err)
+	}
+}
