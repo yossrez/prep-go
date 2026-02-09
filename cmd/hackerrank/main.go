@@ -8,6 +8,7 @@ import (
 	_ "github.com/yossrez/prep-go/internal/hackerrank/certify/basics/parity"
 	_ "github.com/yossrez/prep-go/internal/hackerrank/easy/fizzbuzz"
 	_ "github.com/yossrez/prep-go/internal/hackerrank/easy/pickingnumbers"
+	_ "github.com/yossrez/prep-go/internal/hackerrank/easy/savetheprisoner"
 	_ "github.com/yossrez/prep-go/internal/hackerrank/easy/solvemefirst"
 	"github.com/yossrez/prep-go/internal/hackerrank/runner"
 )
