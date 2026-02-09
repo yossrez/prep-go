@@ -1,7 +1,6 @@
 package savetheprisoner
 
 import (
-	"reflect"
 	"testing"
 )
 
@@ -21,14 +20,14 @@ func TestSaveThePrisoner(t *testing.T) {
 		{"Case_8", 3, 4, 1, 1},
 		{"Case_9", 5, 10, 1, 5},
 		{"Case_10", 5, 2, 5, 1},
-		{"Case_10", 5, 1, 5, 5},
-		{"Case_11", 100, 110, 100, 9},
+		{"Case_11", 5, 1, 5, 5},
+		{"Case_12", 100, 110, 100, 9},
 	}
 
 	for _, tt := range cases {
 		t.Run(tt.name, func(t *testing.T) {
 			got := saveThePrisoner(tt.n, tt.m, tt.s)
-			if !reflect.DeepEqual(tt.expected, got) {
+			if tt.expected != got {
 				t.Fatalf("expected %d, got %d", tt.expected, got)
 			}
 		})

@@ -1,7 +1,6 @@
 package pickingnumbers
 
 import (
-	"reflect"
 	"testing"
 )
 
@@ -21,7 +20,7 @@ func TestPickingNumbers(t *testing.T) {
 	for _, tt := range cases {
 		t.Run(tt.name, func(t *testing.T) {
 			got := pickingNumbers(tt.arr)
-			if !reflect.DeepEqual(tt.expected, got) {
+			if tt.expected != got {
 				t.Fatalf("expected %d, got %d", tt.expected, got)
 			}
 		})

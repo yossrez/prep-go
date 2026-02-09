@@ -1,7 +1,6 @@
 package modstrings
 
 import (
-	"reflect"
 	"testing"
 )
 
@@ -17,7 +16,7 @@ func TestModifyString_Table(t *testing.T) {
 	for _, tt := range cases {
 		t.Run(tt.name, func(t *testing.T) {
 			got := ModifyString(tt.args)
-			if !reflect.DeepEqual(tt.expected, got) {
+			if tt.expected != got {
 				t.Fatalf("expected %s, got %s", tt.expected, got)
 			}
 		})
