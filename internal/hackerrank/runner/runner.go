@@ -58,7 +58,7 @@ func Register(meta HackerRankMeta, fn func()) {
 func Execute(name string) error {
 	fn, ok := registry[name]
 	if !ok {
-		return fmt.Errorf("unknown exercise: %s", name)
+		return fmt.Errorf("unknown exercise: %s, cmd: hackerrank", name)
 	}
 	fn()
 	return nil
