@@ -20,7 +20,7 @@ func TestFizzBuzz(t *testing.T) {
 	for _, tt := range cases {
 		t.Run(tt.name, func(t *testing.T) {
 			fizzBuzz(tt.n)
-			got := testBucket
+			got := bucket
 			if !reflect.DeepEqual(tt.expected, got) {
 				t.Fatalf("expected %s, got %s", tt.expected, got)
 			}
