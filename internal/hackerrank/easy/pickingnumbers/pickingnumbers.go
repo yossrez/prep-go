@@ -48,10 +48,12 @@ func Run() {
 }
 
 func init() {
-	runner.Register(runner.HackerRankMeta{
-		Problem:    "pickingnumbers",
-		Skills:     runner.ProblemSolvingBasic,
-		Difficulty: runner.Easy,
-		Subdomain:  runner.Implementation},
+	runner.Register(
+		runner.HackerRankMeta{
+			Problem:    "pickingnumbers",
+			Skills:     runner.ProblemSolvingBasic,
+			Difficulty: runner.Easy,
+			Subdomain:  runner.Implementation,
+		},
 		Run)
 }

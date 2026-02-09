@@ -75,10 +75,12 @@ func checkError(err error) {
 
 // ran automatically when the package imported
 func init() {
-	meta := runner.HackerRankMeta{}
-	meta.Problem = "modstrings"
-	meta.Skills = runner.ProblemSolvingBasic
-	meta.Difficulty = runner.Easy
-	meta.Subdomain = runner.Strings
-	runner.Register(meta, Run)
+	runner.Register(
+		runner.HackerRankMeta{
+			Problem:    "modstrings",
+			Skills:     runner.ProblemSolvingBasic,
+			Difficulty: runner.Easy,
+			Subdomain:  runner.Strings,
+		},
+		Run)
 }

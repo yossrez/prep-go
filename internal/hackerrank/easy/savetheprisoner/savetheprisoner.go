@@ -31,10 +31,12 @@ func Run() {
 }
 
 func init() {
-	runner.Register(runner.HackerRankMeta{
-		Problem:    "savetheprisoner",
-		Skills:     runner.ProblemSolvingBasic,
-		Difficulty: runner.Easy,
-		Subdomain:  runner.Implementation},
+	runner.Register(
+		runner.HackerRankMeta{
+			Problem:    "savetheprisoner",
+			Skills:     runner.ProblemSolvingBasic,
+			Difficulty: runner.Easy,
+			Subdomain:  runner.Implementation,
+		},
 		Run)
 }

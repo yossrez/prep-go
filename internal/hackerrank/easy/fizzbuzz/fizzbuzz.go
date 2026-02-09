@@ -53,10 +53,12 @@ func Run() {
 
 // ran automatically when the package imported
 func init() {
-	meta := runner.HackerRankMeta{}
-	meta.Problem = "fizzbuzz"
-	meta.Skills = runner.ProblemSolvingBasic
-	meta.Difficulty = runner.Easy
-	meta.Subdomain = runner.Warmup
-	runner.Register(meta, Run)
+	runner.Register(
+		runner.HackerRankMeta{
+			Problem:    "fizzbuzz",
+			Skills:     runner.ProblemSolvingBasic,
+			Difficulty: runner.Easy,
+			Subdomain:  runner.Warmup,
+		},
+		Run)
 }

@@ -20,10 +20,12 @@ func Run() {
 }
 
 func init() {
-	meta := runner.HackerRankMeta{}
-	meta.Problem = "solvemefirst"
-	meta.Skills = runner.ProblemSolvingBasic
-	meta.Difficulty = runner.Easy
-	meta.Subdomain = runner.Warmup
-	runner.Register(meta, Run)
+	runner.Register(
+		runner.HackerRankMeta{
+			Problem:    "solvemefirst",
+			Skills:     runner.ProblemSolvingBasic,
+			Difficulty: runner.Easy,
+			Subdomain:  runner.Warmup,
+		},
+		Run)
 }
