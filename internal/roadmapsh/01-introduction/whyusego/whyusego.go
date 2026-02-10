@@ -3,7 +3,7 @@ package whyusego
 import (
 	"fmt"
 
-	"github.com/yossrez/prep-go/internal/roadmapsh/runner"
+	"github.com/yossrez/prep-go/internal/roadmapsh"
 )
 
 func whyUseGo() string {
@@ -32,5 +32,8 @@ func Run() {
 }
 
 func init() {
-	runner.Register("whyusego", Run)
+	err := roadmapsh.Registry.Register("whyusego", Run, nil)
+	if err != nil {
+		panic(err)
+	}
 }

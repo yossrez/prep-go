@@ -1,6 +1,6 @@
 package icecreamparlor
 
-import "github.com/yossrez/prep-go/internal/hackerrank/runner"
+import "github.com/yossrez/prep-go/internal/hackerrank"
 
 /*
  * Given a list of prices for the flavors of
@@ -37,12 +37,14 @@ func Run() {
 }
 
 func init() {
-	runner.Register(
-		runner.HackerRankMeta{
-			Problem:    "icecreamparlor",
-			Skills:     runner.ProblemSolvingIntermediate,
-			Difficulty: runner.Easy,
-			Subdomain:  runner.Search,
-		},
-		Run)
+	meta := hackerrank.Meta{
+		Problem:    "icecreamparlor",
+		Skills:     hackerrank.ProblemSolvingIntermediate,
+		Difficulty: hackerrank.Easy,
+		Subdomain:  hackerrank.Search,
+	}
+	err := hackerrank.Registry.Register(meta.Problem, Run, meta)
+	if err != nil {
+		panic(err)
+	}
 }

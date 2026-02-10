@@ -1,6 +1,6 @@
 package gameofthrones
 
-import "github.com/yossrez/prep-go/internal/hackerrank/runner"
+import "github.com/yossrez/prep-go/internal/hackerrank"
 
 func gameOfThrones(s string) string {
 	token := map[rune]int{}
@@ -26,12 +26,14 @@ func Run() {
 }
 
 func init() {
-	runner.Register(
-		runner.HackerRankMeta{
-			Problem:    "gameofthrones",
-			Skills:     runner.ProblemSolvingBasic,
-			Difficulty: runner.Easy,
-			Subdomain:  runner.Strings,
-		},
-		Run)
+	meta := hackerrank.Meta{
+		Problem:    "gameofthrones",
+		Skills:     hackerrank.ProblemSolvingBasic,
+		Difficulty: hackerrank.Easy,
+		Subdomain:  hackerrank.Strings,
+	}
+	err := hackerrank.Registry.Register(meta.Problem, Run, meta)
+	if err != nil {
+		panic(err)
+	}
 }

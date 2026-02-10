@@ -3,7 +3,7 @@ package fizzbuzz
 import (
 	"fmt"
 
-	"github.com/yossrez/prep-go/internal/hackerrank/runner"
+	"github.com/yossrez/prep-go/internal/hackerrank"
 )
 
 /*
@@ -50,12 +50,14 @@ func Run() {
 
 // ran automatically when the package imported
 func init() {
-	runner.Register(
-		runner.HackerRankMeta{
-			Problem:    "fizzbuzz",
-			Skills:     runner.ProblemSolvingBasic,
-			Difficulty: runner.Easy,
-			Subdomain:  runner.Warmup,
-		},
-		Run)
+	meta := hackerrank.Meta{
+		Problem:    "fizzbuzz",
+		Skills:     hackerrank.ProblemSolvingBasic,
+		Difficulty: hackerrank.Easy,
+		Subdomain:  hackerrank.Warmup,
+	}
+	err := hackerrank.Registry.Register(meta.Problem, Run, meta)
+	if err != nil {
+		panic(err)
+	}
 }

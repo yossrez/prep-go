@@ -1,7 +1,7 @@
 package pickingnumbers
 
 import (
-	"github.com/yossrez/prep-go/internal/hackerrank/runner"
+	"github.com/yossrez/prep-go/internal/hackerrank"
 )
 
 /*
@@ -48,12 +48,14 @@ func Run() {
 }
 
 func init() {
-	runner.Register(
-		runner.HackerRankMeta{
-			Problem:    "pickingnumbers",
-			Skills:     runner.ProblemSolvingBasic,
-			Difficulty: runner.Easy,
-			Subdomain:  runner.Implementation,
-		},
-		Run)
+	meta := hackerrank.Meta{
+		Problem:    "pickingnumbers",
+		Skills:     hackerrank.ProblemSolvingBasic,
+		Difficulty: hackerrank.Easy,
+		Subdomain:  hackerrank.Implementation,
+	}
+	err := hackerrank.Registry.Register(meta.Problem, Run, meta)
+	if err != nil {
+		panic(err)
+	}
 }

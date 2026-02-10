@@ -1,6 +1,6 @@
 package savetheprisoner
 
-import "github.com/yossrez/prep-go/internal/hackerrank/runner"
+import "github.com/yossrez/prep-go/internal/hackerrank"
 
 /*
  * Complete the saveThePrisoner func.
@@ -31,12 +31,14 @@ func Run() {
 }
 
 func init() {
-	runner.Register(
-		runner.HackerRankMeta{
-			Problem:    "savetheprisoner",
-			Skills:     runner.ProblemSolvingBasic,
-			Difficulty: runner.Easy,
-			Subdomain:  runner.Implementation,
-		},
-		Run)
+	meta := hackerrank.Meta{
+		Problem:    "savetheprisoner",
+		Skills:     hackerrank.ProblemSolvingBasic,
+		Difficulty: hackerrank.Easy,
+		Subdomain:  hackerrank.Implementation,
+	}
+	err := hackerrank.Registry.Register(meta.Problem, Run, meta)
+	if err != nil {
+		panic(err)
+	}
 }

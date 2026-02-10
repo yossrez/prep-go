@@ -9,7 +9,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/yossrez/prep-go/internal/hackerrank/runner"
+	"github.com/yossrez/prep-go/internal/hackerrank"
 )
 
 /*
@@ -120,11 +120,13 @@ func checkError(err error) {
 
 // ran automatically when the package imported
 func init() {
-	runner.Register(
-		runner.HackerRankMeta{
-			Problem:    "parity",
-			Skills:     runner.ProblemSolvingBasic,
-			Difficulty: runner.Easy,
-		},
-		Run)
+	meta := hackerrank.Meta{
+		Problem:    "parity",
+		Skills:     hackerrank.ProblemSolvingBasic,
+		Difficulty: hackerrank.Easy,
+	}
+	err := hackerrank.Registry.Register(meta.Problem, Run, meta)
+	if err != nil {
+		panic(err)
+	}
 }

@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/yossrez/prep-go/internal/hackerrank/runner"
+	"github.com/yossrez/prep-go/internal/hackerrank"
 )
 
 /*
@@ -75,12 +75,14 @@ func checkError(err error) {
 
 // ran automatically when the package imported
 func init() {
-	runner.Register(
-		runner.HackerRankMeta{
-			Problem:    "modstrings",
-			Skills:     runner.ProblemSolvingBasic,
-			Difficulty: runner.Easy,
-			Subdomain:  runner.Strings,
-		},
-		Run)
+	meta := hackerrank.Meta{
+		Problem:    "modstrings",
+		Skills:     hackerrank.ProblemSolvingBasic,
+		Difficulty: hackerrank.Easy,
+		Subdomain:  hackerrank.Strings,
+	}
+	err := hackerrank.Registry.Register(meta.Problem, Run, meta)
+	if err != nil {
+		panic(err)
+	}
 }

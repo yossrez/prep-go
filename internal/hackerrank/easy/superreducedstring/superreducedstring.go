@@ -3,7 +3,7 @@ package superreducedstring
 import (
 	"strings"
 
-	"github.com/yossrez/prep-go/internal/hackerrank/runner"
+	"github.com/yossrez/prep-go/internal/hackerrank"
 )
 
 /*
@@ -75,12 +75,14 @@ func Run() {
 }
 
 func init() {
-	runner.Register(
-		runner.HackerRankMeta{
-			Problem:    "superreducedstring",
-			Skills:     runner.ProblemSolvingIntermediate,
-			Difficulty: runner.Easy,
-			Subdomain:  runner.Strings,
-		},
-		Run)
+	meta := hackerrank.Meta{
+		Problem:    "superreducedstring",
+		Skills:     hackerrank.ProblemSolvingIntermediate,
+		Difficulty: hackerrank.Easy,
+		Subdomain:  hackerrank.Strings,
+	}
+	err := hackerrank.Registry.Register(meta.Problem, Run, meta)
+	if err != nil {
+		panic(err)
+	}
 }

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os/user"
 
-	"github.com/yossrez/prep-go/internal/roadmapsh/runner"
+	"github.com/yossrez/prep-go/internal/roadmapsh"
 )
 
 func helloWorld() string {
@@ -22,5 +22,8 @@ func Run() {
 }
 
 func init() {
-	runner.Register("helloworld", Run)
+	err := roadmapsh.Registry.Register("helloworld", Run, nil)
+	if err != nil {
+		panic(err)
+	}
 }

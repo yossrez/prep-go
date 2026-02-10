@@ -1,8 +1,6 @@
-package runner
+package hackerrank
 
-import (
-	"fmt"
-)
+import "github.com/yossrez/prep-go/pkg/registrar"
 
 type SkillLevel int
 
@@ -42,32 +40,15 @@ const (
 	Debugging
 )
 
-type HackerRankMeta struct {
+type Meta struct {
 	Problem    string
 	Skills     SkillLevel
 	Difficulty Difficulty
 	Subdomain  Subdomain
 }
 
-var registry = map[string]func(){}
+var Registry *registrar.Registry
 
-func Register(meta HackerRankMeta, fn func()) {
-	registry[meta.Problem] = fn
-}
-
-func Execute(name string) error {
-	fn, ok := registry[name]
-	if !ok {
-		return fmt.Errorf("unknown exercise: %s, cmd: hackerrank", name)
-	}
-	fn()
-	return nil
-}
-
-func List() []string {
-	keys := make([]string, 0, len(registry))
-	for k := range registry {
-		keys = append(keys, k)
-	}
-	return keys
+func init() {
+	Registry = registrar.New("hackerrank")
 }
