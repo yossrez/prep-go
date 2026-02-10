@@ -19,12 +19,12 @@ import (
  */
 
 func ModifyString(str string) string {
-	whitespacebyte := byte(' ')
+	whitespaceByte := byte(' ')
 	builder := strings.Builder{}
 	n := len(str) - 1
 
 	for i := n; i >= 0; i-- {
-		if str[i] == whitespacebyte {
+		if str[i] == whitespaceByte {
 			continue
 		}
 		_, err := strconv.Atoi(string(str[i]))

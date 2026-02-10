@@ -10,10 +10,14 @@ func historyOfGo() string {
 	summary := `
 	* History of Go
 	*
-	* Created at Google in 2007 by Griesemer, Pike, and Thompson.
-	* Announced publicly in 2009, version 1.0 in 2012. Key milestones
-	* include modules (Go 1.11) and generics (Go 1.18). Design for
-	* large-scale software development combining efficiency and simplicity.
+	* 2007 -> Created at Google by Griesemer, Pike, and Thompson.
+	* 2009 -> Announced publicly.
+	* 2012 -> version 1.0.
+	* 2018 -> module (Go 1.11)
+	* 2022 -> generics (Go 1.18)
+	*
+	* Design for large-scale software development
+	* combining efficiency and simplicity.
 	`
 	return summary
 }

@@ -28,9 +28,9 @@ func superReducedString(s string) string {
 	for {
 		str := strBuilder.String()
 		lastIdx := len(str) - 1
-		byte := str[l]
-		adjByte := str[r]
-		if byte != adjByte {
+		strByte := str[l]
+		strAdjByte := str[r]
+		if strByte != strAdjByte {
 			l++
 			r++
 			if r > lastIdx {
