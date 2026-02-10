@@ -13,6 +13,7 @@ import (
 	_ "github.com/yossrez/prep-go/internal/hackerrank/easy/pickingnumbers"
 	_ "github.com/yossrez/prep-go/internal/hackerrank/easy/savetheprisoner"
 	_ "github.com/yossrez/prep-go/internal/hackerrank/easy/solvemefirst"
+	_ "github.com/yossrez/prep-go/internal/hackerrank/easy/superreducedstring"
 	"github.com/yossrez/prep-go/internal/hackerrank/runner"
 )
 
