@@ -12,6 +12,15 @@ import (
 	"github.com/yossrez/prep-go/internal/hackerrank"
 )
 
+/*
+ * Given a string, remove characters until the string
+ * is made up of any two alternating characters.
+ * When choosing a character to remove, all instance
+ * of that character must be removed.
+ *
+ * Determine the longest string possible that
+ * contains just two alternating letters.
+ */
 func alternate(s string) int32 {
 	var longestTwoChars int32
 
