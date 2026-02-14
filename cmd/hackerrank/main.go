@@ -10,6 +10,7 @@ import (
 	_ "github.com/yossrez/prep-go/internal/hackerrank/certify/basics/parity"
 	_ "github.com/yossrez/prep-go/internal/hackerrank/easy/diagonaldiff"
 	_ "github.com/yossrez/prep-go/internal/hackerrank/easy/fizzbuzz"
+	_ "github.com/yossrez/prep-go/internal/hackerrank/easy/flatlandss"
 	_ "github.com/yossrez/prep-go/internal/hackerrank/easy/gameofthrones"
 	_ "github.com/yossrez/prep-go/internal/hackerrank/easy/icecreamparlor"
 	_ "github.com/yossrez/prep-go/internal/hackerrank/easy/pickingnumbers"
