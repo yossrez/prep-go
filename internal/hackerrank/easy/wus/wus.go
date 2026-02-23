@@ -1,8 +1,6 @@
 package wus
 
 import (
-	"fmt"
-
 	"github.com/yossrez/prep-go/internal/hackerrank"
 )
 
@@ -66,7 +64,7 @@ func weightedUniformStrings(s string, queries []int32) []string {
 
 func asciiCharsWeight() map[rune]int32 {
 	weightMap := make(map[rune]int32, 26)
-	asciiStr := "abcdefghijklmnopqrstuvwxyz"
+	const asciiStr string = "abcdefghijklmnopqrstuvwxyz"
 	for i, rune := range asciiStr {
 		weightMap[rune] = int32(i + 1)
 	}
@@ -76,8 +74,7 @@ func asciiCharsWeight() map[rune]int32 {
 // main
 func Run() {
 	// expect []string{"Yes", "No", "No", "Yes", "No"}
-	res := weightedUniformStrings("abbcccdddd", []int32{1, 7, 5, 4, 15})
-	fmt.Println(res)
+	_ = weightedUniformStrings("abbcccdddd", []int32{1, 7, 5, 4, 15})
 }
 
 func init() {
