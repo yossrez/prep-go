@@ -18,6 +18,7 @@ import (
 	_ "github.com/yossrez/prep-go/internal/hackerrank/easy/solvemefirst"
 	_ "github.com/yossrez/prep-go/internal/hackerrank/easy/superreducedstring"
 	_ "github.com/yossrez/prep-go/internal/hackerrank/easy/twocharacters"
+	_ "github.com/yossrez/prep-go/internal/hackerrank/easy/wus"
 )
 
 func main() {
