@@ -8,6 +8,7 @@ import (
 	"github.com/yossrez/prep-go/internal/hackerrank"
 	_ "github.com/yossrez/prep-go/internal/hackerrank/certify/basics/modstrings"
 	_ "github.com/yossrez/prep-go/internal/hackerrank/certify/basics/parity"
+	_ "github.com/yossrez/prep-go/internal/hackerrank/easy/beutifulpairs"
 	_ "github.com/yossrez/prep-go/internal/hackerrank/easy/diagonaldiff"
 	_ "github.com/yossrez/prep-go/internal/hackerrank/easy/fizzbuzz"
 	_ "github.com/yossrez/prep-go/internal/hackerrank/easy/flatlandss"
